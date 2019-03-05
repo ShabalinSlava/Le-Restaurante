@@ -25,6 +25,10 @@
     @media (min-width: $desktopHuge) {
       @content;
     }
+  } @else if $media == desktopBig {
+    @media (min-width: $desktopBig) {
+      @content;
+    }
   }
 }
 
@@ -39,7 +43,6 @@
     font-family: $font-family;
     font-weight: $weight;
     font-style: $style;
-
     @if $asset-pipeline == true {
       src: font-url("#{$file-path}.eot");
       src: font-url("#{$file-path}.eot?#iefix") format("embedded-opentype"),
