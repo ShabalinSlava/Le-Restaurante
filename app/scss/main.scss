@@ -41,32 +41,9 @@
 
 .main-restaurante-navigation {
   display: flex;
-  margin-bottom: 40px;
   margin: 0px 20px;
   justify-content: space-between;
   align-items: center;
-
-  @include respond-to(tablet) {
-    margin-bottom: 70px;
-  }
-
-  @include respond-to(tabletLarge) {
-    margin-bottom: 100px;
-  }
-
-  @include respond-to(desktop) {
-    margin-bottom: 110px;
-    align-items: baseline;
-    justify-content: center;
-  }
-
-  @include respond-to(desktopLarge) {
-    margin-bottom: 140px;
-  }
-
-  @include respond-to(desktopHuge) {
-    margin-bottom: 160px;
-  }
 
   @include respond-to(desktopBig) {
     margin-bottom: 244px;
@@ -79,13 +56,13 @@
   background-repeat: no-repeat;
   width: 153px;
   height: 54px;
-  margin: 3px 0px 0px -20px;
+  margin: 3px 0px 0px -6px;
   background-size: contain;
 
   @include respond-to(tablet) {
     width: 193px;
     height: 64px;
-    margin: 3px 0px 0px 0px;
+    margin: 3px 0px 0px -20px;
   }
 
   @include respond-to(tabletLarge) {
@@ -223,35 +200,26 @@
 
   @include respond-to(tablet) {
     display: flex;
-    justify-content: space-between;
-    margin: 0px 30px;
-  }
-
-  @include respond-to(tabletLarge) {
-    margin: 0px 40px;
-  }
-
-  @include respond-to(desktop) {
-    margin: 0px 40px;
-    min-height: 0px;
-  }
-
-  @include respond-to(desktopLarge) {
-    margin: 0px 40px;
-    min-height: 0px;
-  }
-
-  @include respond-to(desktopHuge) {
-    margin: 0px 40px;
-    min-height: 260px;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+    top: 40%;
   }
 
   @include respond-to(desktopBig) {
     margin: 0px 80px;
+    justify-content: space-between;
+    position: static;
+    width: 92%;
+    min-height: 260px;
   }
 }
 
 .main-slider-container {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+
   @include respond-to(tablet) {
     display: none;
   }
@@ -265,6 +233,29 @@
 .category-arrows {
   display: flex;
   justify-content: space-between;
+  margin: 0px 20px 10px 20px;
+}
+
+.main-slider-container .slick-slider {
+  padding-bottom: 0px;
+}
+
+.category-vegan {
+  @include respond-to(tablet) {
+    margin: 0px 30px;
+  }
+
+  @include respond-to(tabletLarge) {
+    margin: 0px 60px;
+  }
+
+  @include respond-to(desktopLarge) {
+    margin: 0px 90px;
+  }
+
+  @include respond-to(desktopBig) {
+    margin: 0px 0px;
+  }
 }
 
 .category-meat,
@@ -276,18 +267,18 @@
   height: 90px;
 
   @include respond-to(tabletLarge) {
-    width: 162px;
-    height: 90px;
+    width: 182px;
+    height: 100px;
   }
 
   @include respond-to(desktop) {
-    width: 212px;
-    height: 116px;
+    width: 242px;
+    height: 136px;
   }
 
   @include respond-to(desktopLarge) {
-    width: 292px;
-    height: 156px;
+    width: 302px;
+    height: 166px;
   }
 
   @include respond-to(desktopHuge) {
@@ -323,7 +314,7 @@
   padding: 12px 23px 0px 23px;
 
   @include respond-to(desktop) {
-    padding: 15px 43px 0px 43px;
+    padding: 25px 43px 0px 43px;
   }
 
   @include respond-to(desktopLarge) {
@@ -344,7 +335,7 @@
   padding: 12px 20px 0px 20px;
 
   @include respond-to(desktop) {
-    padding: 15px 40px 0px 40px;
+    padding: 25px 40px 0px 40px;
   }
 
   @include respond-to(desktopLarge) {
@@ -364,7 +355,7 @@
   padding: 12px 20px 0px 20px;
 
   @include respond-to(desktop) {
-    padding: 15px 30px 0px 30px;
+    padding: 25px 30px 0px 30px;
   }
 
   @include respond-to(desktopLarge) {
@@ -534,7 +525,7 @@
 
 .dishes-left,
 .dishes-right {
-  display: inline-block;
+  display: block;
   margin-bottom: 38px;
 
   @include respond-to(tablet) {
