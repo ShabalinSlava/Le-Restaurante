@@ -45,6 +45,10 @@
   justify-content: space-between;
   align-items: center;
 
+  @include respond-to(desktop) {
+    align-items: baseline;
+  }
+
   @include respond-to(desktopBig) {
     margin-bottom: 244px;
   }
@@ -350,6 +354,7 @@
     padding: 37px 60px 0px 60px;
   }
 }
+
 .secrets-description {
   text-align: center;
   padding: 12px 20px 0px 20px;
@@ -604,6 +609,7 @@
   bottom: -5px;
   right: -5px;
 }
+
 .dishes-allergens-container {
   text-align: left;
 }
@@ -1027,6 +1033,7 @@ input[type="submit"] {
     justify-content: space-between;
     flex-wrap: nowrap;
   }
+
   @include respond-to(tabletLarge) {
     margin: 0px;
   }
@@ -1178,6 +1185,7 @@ input[type="e-mail"]::placeholder {
   font-family: "BoldIt";
   outline: none;
   cursor: pointer;
+  color: #f1ac11;
 }
 
 #navigation-close {
